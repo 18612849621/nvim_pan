@@ -1,4 +1,6 @@
-require("options")
-require("keymaps")
-require("plugins")
-require("colorscheme")
+require("core.options")
+require("core.keymaps")
+require("core.plugins")
+
+-- plugin configs 
+require("plugin_configs")
