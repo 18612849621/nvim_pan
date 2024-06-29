@@ -34,9 +34,10 @@ return require('packer').startup(function(use)
         -- Packer can manage itself
         use 'wbthomason/packer.nvim'
         ---------------------------------------
-        use 'folke/tokyonight.nvim'
+        use 'folke/tokyonight.nvim' -- tokyonight theme
         ---------------------------------------
-
+        use 'nvim-tree/nvim-tree.lua'
+        use 'nvim-tree/nvim-web-devicons'
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then
