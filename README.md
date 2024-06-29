@@ -5,5 +5,5 @@ nvim 配置化 小潘的简单配置化
 
 ## install Pack.nvim
 
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+[plugin git clone files path] ~/.local/share/nvim/site/pack/packer/start/
+[font link] https://www.nerdfonts.com/font-downloads 
