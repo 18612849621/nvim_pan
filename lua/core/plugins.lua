@@ -58,6 +58,12 @@ return require('packer').startup(function(use)
                 ts_update()
             end,
         }
+
+        use {
+            'folke/noice.nvim',
+            requires = {'MunifTanjim/nui.nvim'}
+        }
+
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then
