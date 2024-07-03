@@ -16,6 +16,7 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 -- nvim-tree
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set('n', '<leader>c', ':%s/', opts)
 -----------------
 -- Visual mode --
 -----------------
