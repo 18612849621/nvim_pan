@@ -64,12 +64,7 @@ return require('packer').startup(function(use)
             requires = {'MunifTanjim/nui.nvim'}
         }
 
-        use {
-            "williamboman/mason.nvim",
-            "williamboman/mason-lspconfig.nvim",
-            "neovim/nvim-lspconfig",
-        }
-        -- Automatically set up your configuration after cloning packer.nvim
+       -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then
             require('packer').sync()
