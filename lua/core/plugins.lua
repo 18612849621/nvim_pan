@@ -64,6 +64,12 @@ return require('packer').startup(function(use)
             requires = {'MunifTanjim/nui.nvim'}
         }
 
+        use {
+            'numToStr/Comment.nvim',
+            config = function()
+                require('Comment').setup()
+            end
+        }
        -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then
