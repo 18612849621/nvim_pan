@@ -91,7 +91,15 @@ ins_left {
 ins_left {
   -- mode component
   'mode', 
-  icon = ' ',
+  fmt = function(str)
+    if (vim.fn.mode() == 'n') then
+        return '  ' .. str
+    elseif (vim.fn.mode() == 'v') then
+        return '󱗆  ' .. str
+    else
+        return '  ' .. str
+    end
+  end,
   color = function()
     -- auto change color according to neovims mode
     local mode_color = {
@@ -130,7 +138,7 @@ ins_left {
 
 ins_left {
   'branch',
-  icon = ' ',
+  icon = ' ',
   color = { fg = colors.violet, gui = 'bold' },
 }
 
