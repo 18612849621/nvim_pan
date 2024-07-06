@@ -39,13 +39,13 @@ local conditions = {
 local config = {
   options = {
     -- Disable sections and component separators
-    component_separators = '',
+    component_separators = {},
     section_separators = '',
     theme = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
       -- are just setting default looks o statusline
-      normal = { c = { fg = colors.fg, bg = colors.bg } },
+      normal = { c = { fg = colors.fg, bg = colors.blue } },
       inactive = { c = { fg = colors.fg, bg = colors.bg } }, 
     },
   },
@@ -81,23 +81,15 @@ local function ins_right(component)
 end
 
 ins_left {
-  function()
-    return '▊'
-  end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-}
-
-ins_left {
   -- mode component
   'mode', 
   fmt = function(str)
     if (vim.fn.mode() == 'n') then
-        return '  ' .. str
+        return '   ' .. str
     elseif (vim.fn.mode() == 'v') then
-        return '󱗆  ' .. str
+        return ' 󱗆  ' .. str
     else
-        return '  ' .. str
+        return '   ' .. str 
     end
   end,
   color = function()
@@ -124,8 +116,8 @@ ins_left {
       ['!'] = colors.red,
       t = colors.red,
     }
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
+    return { fg = colors.bg, bg = mode_color[vim.fn.mode()] }
+  end, 
   padding = { right = 1 },
 }
 
@@ -133,19 +125,19 @@ ins_left {
   'filename',
   icon = '󰈔',
   cond = conditions.buffer_not_empty,
-  color = { fg = colors.pink, gui = 'bold' },
+  color = { fg = colors.bg, bg = colors.pink, gui = 'bold' },
 }
 
 ins_left {
   'branch',
-  icon = ' ',
-  color = { fg = colors.violet, gui = 'bold' },
+  icon = '',
+  color = { fg = colors.bg, bg = colors.violet, gui = 'bold' },
 }
 
 ins_left { 
   'location', 
-  icon = '',
-  color = { fg = colors.l_yellow, gui = 'bold' },
+  icon = ' ',
+  color = { fg = colors.bg, bg = colors.l_yellow, gui = 'bold' },
 }
 
 ins_right {
@@ -154,8 +146,8 @@ ins_right {
     return '󰔠 ' .. str
   end,
   style = ("%Y/%m/%d"), 
-  padding = { right = 1 }, 
-  color = { fg = colors.blue, gui = 'bold' },
+  padding = {left = 1, right = 1 }, 
+  color = { fg = colors.bg, bg = colors.blue, gui = 'bold' },
 }
 
 ins_right {
@@ -165,34 +157,26 @@ ins_right {
   end,
   style = ("%H:%M"),
   padding = { right = 1 }, 
-  color = { fg = colors.blue, gui = 'bold' },
+  color = { fg = colors.bg, bg = colors.blue, gui = 'bold' },
 }
 
 ins_right {
   'fileformat',
   fmt = string.upper,
   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = 'bold' },
+  color = { fg = colors.bg, bg = colors.cyan, gui = 'bold' },
 }
 
 ins_right {
   'diff',
   -- Is it me or the symbol for modified us really weird
-  symbols = { added = ' ', modified = ' ', removed = ' ' },
+  symbols = { added = ' ', modified = '  ', removed = '  ' },
   diff_color = {
-    added = { fg = colors.green },
-    modified = { fg = colors.orange },
-    removed = { fg = colors.red },
+    added = { fg = colors.bg, bg = colors.green },
+    modified = { fg = colors.bg, bg = colors.orange },
+    removed = { fg = colors.bg, bg = colors.red },
   },
   cond = conditions.hide_in_width,
-}
-
-ins_right {
-  function()
-    return '▊'
-  end,
-  color = { fg = colors.blue },
-  padding = { left = 1 },
 }
 
 -- Now don't forget to initialize lualine
