@@ -22,7 +22,6 @@ vim.cmd([[
   augroup end
 ]])
 
-
 -- Install plugins here - `use ...`
 -- Packer.nvim hints
 --     after = string or list,           -- Specifies plugins to load before this plugin. See "sequencing" below
@@ -36,6 +35,8 @@ return require('packer').startup(function(use)
         ---------------------------------------
         use 'folke/tokyonight.nvim' -- tokyonight theme
         ---------------------------------------
+        use 'nvim-tree/nvim-web-devicons'
+
         use {
             'nvim-lualine/lualine.nvim',
             requires = { 'nvim-tree/nvim-web-devicons', opt = true }
