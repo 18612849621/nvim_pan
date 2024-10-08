@@ -6,6 +6,7 @@ nvim 配置化 小潘的简单配置化
 ## install Pack.nvim
 
 [plugin git clone files path] ~/.local/share/nvim/site/pack/packer/start/
+
 [font link] https://www.nerdfonts.com/font-downloads 
 
 ```shell
@@ -19,3 +20,5 @@ scp -r /Users/panyuchen/.config/nvim dev-panyuchen-01.dev.kwaidc.com:/home/panyu
 # 所有package
 scp -r /Users/panyuchen/.local/share/nvim dev-panyuchen-01.dev.kwaidc.com:/home/panyuchen/.local/share/
 ```
+
+:LspInstallInfo 调用出nvim-lsp-installer
