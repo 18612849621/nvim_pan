@@ -18,6 +18,4 @@ rm -rf ~/.local/share/nvim
 scp -r /Users/panyuchen/.config/nvim dev-panyuchen-01.dev.kwaidc.com:/home/panyuchen/.config
 # 所有package
 scp -r /Users/panyuchen/.local/share/nvim dev-panyuchen-01.dev.kwaidc.com:/home/panyuchen/.local/share/
-# coc
-/Users/panyuchen/.config/coc
 ```
