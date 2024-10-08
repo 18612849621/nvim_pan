@@ -6,3 +6,5 @@ require("plugin_configs.treesitter")
 require("plugin_configs.noice")
 require("plugin_configs.comment")
 require("plugin_configs.nvimicon")
+require("plugin_configs.lsp")
+

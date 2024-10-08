@@ -71,6 +71,9 @@ return require('packer').startup(function(use)
                 require('Comment').setup()
             end
         }
+        use "williamboman/nvim-lsp-installer"
+        use 'neovim/nvim-lspconfig'
+
        -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then
