@@ -20,6 +20,22 @@ vim.keymap.set('n', '<leader>c', ':%s/', opts)
 
 --jq
 vim.keymap.set('n', '<leader>jq', ':%!jq \'.\'<CR>', opts)
+
+-- bufferline
+-- 切换到下一个 buffer
+vim.keymap.set('n', '<leader>bn', ':BufferLineCycleNext<CR>', opts)
+
+-- 切换到上一个 buffer
+vim.keymap.set('n', '<leader>bp', ':BufferLineCyclePrev<CR>', opts)
+
+-- 关闭当前 buffer
+vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', opts)
+
+-- 选中某一个buffer
+for i = 1, 9 do
+  vim.keymap.set('n', '<leader>' .. i, ':BufferLineGoToBuffer ' .. i .. '<CR>', opts)
+end
+
 -----------------
 -- Visual mode --
 -----------------
