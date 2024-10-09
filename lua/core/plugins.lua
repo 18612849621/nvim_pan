@@ -54,10 +54,10 @@ return require('packer').startup(function(use)
         
         use {
             'nvim-treesitter/nvim-treesitter',
-            run = function()
-                local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-                ts_update()
-            end,
+            -- run = function()
+            --     local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            --     ts_update()
+            -- end,
         }
 
         use {
@@ -73,6 +73,7 @@ return require('packer').startup(function(use)
         }
         use "williamboman/nvim-lsp-installer"
         use 'neovim/nvim-lspconfig'
+        use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
        -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
