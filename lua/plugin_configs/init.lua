@@ -8,4 +8,5 @@ require("plugin_configs.comment")
 require("plugin_configs.nvimicon")
 require("plugin_configs.lsp")
 require("plugin_configs.bufferline")
+require("plugin_configs.mason")
 

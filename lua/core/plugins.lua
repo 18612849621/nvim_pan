@@ -71,6 +71,7 @@ return require('packer').startup(function(use)
                 require('Comment').setup()
             end
         }
+        use "williamboman/mason.nvim"
         use "williamboman/nvim-lsp-installer"
         use 'neovim/nvim-lspconfig'
         use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
