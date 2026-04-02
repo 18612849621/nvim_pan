@@ -1,14 +1,10 @@
 return {
-  { "nvim-tree/nvim-web-devicons", lazy = true },
-
   { "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = { options = { theme = "github_light" } },
+    opts = { options = { theme = "github_light", icons_enabled = false } },
   },
 
   { "akinsho/bufferline.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {},
+    opts = { options = { show_buffer_icons = false } },
   },
 
   { "folke/noice.nvim",

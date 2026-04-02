@@ -8,14 +8,8 @@
 bash install.sh
 ```
 
-脚本会自动安装 neovim、ripgrep 等依赖，并将配置部署到 `~/.config/nvim`。
-国内机器自动切换 GitHub 镜像，无需手动配置。
-
-安装后 `vi` / `vim` / `nvim` 均指向 neovim。
-
-## 字体
-
-需要安装 Nerd Font 才能正常显示图标：https://www.nerdfonts.com/font-downloads
+脚本自动安装 neovim、ripgrep，部署配置到 `~/.config/nvim`，国内机器自动切换 GitHub 镜像。
+安装后 `vi` / `vim` / `nvim` 均指向 neovim，无需 Nerd Font。
 
 ---
 

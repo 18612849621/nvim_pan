@@ -1,7 +1,14 @@
 return {
   { "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {},
+    opts = {
+      renderer = {
+        icons = {
+          webdev_colors = false,
+          show = { file = false, folder = false, folder_arrow = true, git = false },
+          glyphs = { folder = { arrow_closed = "▸", arrow_open = "▾" } },
+        },
+      },
+    },
   },
 
   { "nvim-telescope/telescope.nvim", tag = "0.1.8",
