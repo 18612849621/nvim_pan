@@ -124,6 +124,14 @@ echo "==> 安装配置..."
 cp -r "$REPO_DIR" "$NVIM_CONFIG"
 rm -rf "$NVIM_CONFIG/.git" "$NVIM_CONFIG/install.sh"
 
+# 提前 clone lazy.nvim，避免首次启动 bootstrap 报错
+LAZYPATH="$HOME/.local/share/nvim/lazy/lazy.nvim"
+if [ ! -d "$LAZYPATH" ]; then
+  echo "==> 下载 lazy.nvim..."
+  git clone --filter=blob:none --branch=stable \
+    "${GITHUB_MIRROR}/folke/lazy.nvim.git" "$LAZYPATH"
+fi
+
 echo "==> 安装插件（无头模式）..."
 nvim --headless "+Lazy! sync" +qa 2>&1 | tail -5
 
