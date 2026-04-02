@@ -1,6 +1,2 @@
-require("core.options")
-require("core.keymaps")
-require("core.plugins")
-
--- plugin configs 
-require("plugin_configs")
+require("config.options")
+require("config.lazy")
