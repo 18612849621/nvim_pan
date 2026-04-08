@@ -1,6 +1,6 @@
 # nvim_pan
 
-小潘的 Neovim 配置，基于 lazy.nvim，GitHub Light 主题。
+小潘的 Neovim 配置，基于 lazy.nvim，使用 Neovim 内置默认主题，尽量保证跨平台可读性。
 
 ## 安装
 
@@ -8,8 +8,8 @@
 bash install.sh
 ```
 
-脚本自动安装 neovim、ripgrep，部署配置到 `~/.config/nvim`，国内机器自动切换 GitHub 镜像。
-安装后 `vi` / `vim` / `nvim` 均指向 neovim，无需 Nerd Font。
+脚本会自动安装 neovim、ripgrep，部署配置到 `~/.config/nvim`，国内机器自动切换 GitHub 镜像。
+安装时会优先复用现有环境；无 sudo 时尽量走用户目录安装。安装后 `vi` / `vim` / `nvim` 均尽量指向 neovim，无需 Nerd Font。
 
 ---
 

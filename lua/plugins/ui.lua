@@ -1,6 +1,6 @@
 return {
   { "nvim-lualine/lualine.nvim",
-    opts = { options = { theme = "github_light", icons_enabled = false } },
+    opts = { options = { theme = "auto", icons_enabled = false } },
   },
 
   { "akinsho/bufferline.nvim",
